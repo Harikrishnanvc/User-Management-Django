@@ -1,13 +1,14 @@
 from django import forms
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
-from django.core.validators import EmailValidator, RegexValidator
+from django.core.validators import EmailValidator, RegexValidator, MaxLengthValidator, MinLengthValidator
 
 from .models import Users
 
 
 class RegistrationForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
+    mobile = forms.CharField(validators=[MinLengthValidator(10), MaxLengthValidator(10)])
 
     class Meta:
         model = Users
@@ -17,12 +18,16 @@ class RegistrationForm(forms.ModelForm):
 
     def clean_mobile(self):
         mobile = self.cleaned_data.get('mobile')
+        if not mobile:
+            raise forms.ValidationError('Phone umber is required.')
         if Users.objects.filter(mobile=mobile).exists():
-            raise ValidationError('This Phone Number is already registered.')
+            raise ValidationError('This Phone number is already registered.')
         return mobile
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
+        if not email:
+            raise forms.ValidationError('E-mail is required.')
         if Users.objects.filter(email=email).exists():
             raise ValidationError('This email is already registered.')
         return email

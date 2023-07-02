@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/staff.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Staff Dashboard</h1>
+        </div>
+        <div class="dashboard-content">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Messages</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2>Welcome, {{user.full_name}}</h2>
+                <p>This is the staff dashboard. You can manage your tasks, view messages, and update your profile.</p>
+                <p>Feel free to explore the various features and options available.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

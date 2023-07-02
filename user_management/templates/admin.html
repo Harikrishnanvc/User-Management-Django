@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div class="dashboard-content">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <h2>Welcome, {{user.full_name}}</h2>
+                <p>This is the admin dashboard. You can manage users, generate reports, and configure system settings.</p>
+                <p>Feel free to explore the various features and options available.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

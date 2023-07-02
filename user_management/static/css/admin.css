@@ -1,0 +1,67 @@
+    /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Dashboard header */
+        .dashboard-header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .dashboard-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Dashboard content */
+        .dashboard-content {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .dashboard-content p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #f4f4f4;
+            width: 200px;
+            padding: 20px;
+            float: left;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 240px;
+            background-color: #fff;
+            padding: 20px;
+        }

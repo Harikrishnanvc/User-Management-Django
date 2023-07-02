@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/student.css' %}">
+
+</head>
+<body>
+<div class="container">
+    <h1>Welcome, {{user.full_name}}</h1>
+    <div class="card">
+        <h2>My Courses</h2>
+        <ul>
+            <li>Course 1</li>
+            <li>Course 2</li>
+            <li>Course 3</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h2>Grades</h2>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>Course 1</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Course 2</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>Course 3</td>
+                <td>A+</td>
+            </tr>
+        </table>
+    </div>
+    <div class="card">
+        <h2>Upcoming Exams</h2>
+        <ul>
+            <li>Exam 1</li>
+            <li>Exam 2</li>
+            <li>Exam 3</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
